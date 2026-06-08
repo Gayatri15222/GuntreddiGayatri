@@ -149,7 +149,26 @@ footer{
     border-top:1px solid rgba(255,255,255,0.1);
     color:#94a3b8;
 }
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
 
+.hero-text{
+    max-width:700px;
+}
+
+.profile-pic{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
 </style>
 </head>
 
@@ -165,19 +184,28 @@ footer{
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
-<div>
-<h1>GAYATRI GUNTREDDI</h1>
-<h2>.NET FULL STACK DEVELOPER</h2>
+    <div class="hero-content">
 
-<p>
-Full Stack Developer with 3 years of experience in ASP.NET Core, C#, SQL Server,
-Entity Framework Core, and REST APIs. Strong expertise in building scalable government
-and enterprise applications with clean architecture and optimized performance.
-</p>
-</div>
+        <img src="gayatri.jpg"
+             alt="Gayatri Guntreddi"
+             class="profile-pic">
+
+        <div class="hero-text">
+            <h1>GAYATRI GUNTREDDI</h1>
+            <h2>.NET FULL STACK DEVELOPER</h2>
+
+            <p>
+                Full Stack Developer with 3 years of experience in ASP.NET Core,
+                C#, SQL Server, Entity Framework Core, and REST APIs. Strong expertise
+                in building scalable government and enterprise applications with clean
+                architecture and optimized performance.
+            </p>
+        </div>
+
+    </div>
 </section>
-
 <!-- ABOUT -->
 <section id="about">
 <h2 class="title">Summary</h2>
