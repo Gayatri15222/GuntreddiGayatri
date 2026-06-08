@@ -1,353 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gayatri Guntreddi | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gayatri Guntreddi | .NET Developer Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<style>
+    body {
+      background: #f4f6fb;
+      color: #333;
+      line-height: 1.6;
+    }
 
-:root{
-    --bg:#0f172a;
-    --card:rgba(255,255,255,0.08);
-    --primary:#3b82f6;
-    --secondary:#38bdf8;
-    --text:#f8fafc;
-    --gray:#cbd5e1;
-}
+    header {
+      background: linear-gradient(135deg, #1f2937, #111827);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
 
-html{
-    scroll-behavior:smooth;
-}
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-body{
-    background:var(--bg);
-    color:var(--text);
-}
+    .contact {
+      margin-top: 15px;
+      font-size: 14px;
+    }
 
-/* NAVBAR */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(15,23,42,.9);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-}
+    .contact span, .contact a {
+      margin: 0 8px;
+      color: #ddd;
+      text-decoration: none;
+    }
 
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
-}
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-nav li{
-    margin:14px;
-}
+    h2 {
+      margin-bottom: 15px;
+      border-left: 5px solid #3b82f6;
+      padding-left: 10px;
+      color: #111827;
+    }
 
-nav a{
-    text-decoration:none;
-    color:white;
-    transition:.3s;
-    font-size:14px;
-}
+    .card {
+      background: white;
+      padding: 20px;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
 
-nav a:hover{
-    color:var(--secondary);
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
 
-/* HERO */
-.hero{
-    min-height:75vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:30px;
-    background:
-    radial-gradient(circle at top left,#2563eb55,transparent 30%),
-    radial-gradient(circle at bottom right,#38bdf855,transparent 30%);
-}
+    .skill-box {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
 
-.hero h1{
-    font-size:3.2rem;
-}
+    ul {
+      margin-left: 20px;
+    }
 
-.hero h2{
-    color:var(--secondary);
-    margin:10px 0;
-    font-size:1.5rem;
-}
+    .badge {
+      display: inline-block;
+      background: #3b82f6;
+      color: white;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-top: 5px;
+    }
 
-.hero p{
-    max-width:750px;
-    margin:auto;
-    color:var(--gray);
-    line-height:1.7;
-    font-size:15px;
-}
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      color: white;
+      margin-top: 20px;
+    }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 22px;
-    background:var(--primary);
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-/* SECTIONS (FIXED GAP ISSUE HERE) */
-section{
-    padding:45px 8%;
-}
-
-/* TITLES */
-.title{
-    text-align:center;
-    font-size:2rem;
-    margin-bottom:20px;
-}
-
-/* GLASS CARD */
-.card{
-    background:var(--card);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:15px;
-    padding:16px;
-}
-
-/* STATS */
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-}
-
-/* ABOUT */
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    line-height:1.7;
-    color:var(--gray);
-    font-size:15px;
-}
-
-/* SKILLS */
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:18px;
-}
-
-/* PROJECTS (FIXED GAP HERE) */
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-    align-items:start;
-}
-
-/* PROJECT CARD */
-.project-card{
-    background:var(--card);
-    border-radius:15px;
-    padding:16px;
-    border:1px solid rgba(255,255,255,.1);
-    transition:.3s;
-}
-
-.project-card:hover{
-    transform:translateY(-6px);
-}
-
-.project-card h3{
-    color:var(--secondary);
-    margin-bottom:10px;
-}
-
-/* EXPERIENCE */
-.timeline{
-    max-width:900px;
-    margin:auto;
-}
-
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    margin:10px 0;
-    color:var(--gray);
-    font-size:15px;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    border-top:1px solid rgba(255,255,255,.1);
-    color:#94a3b8;
-    font-size:14px;
-}
-
-@media(max-width:768px){
-.hero h1{font-size:2.3rem;}
-.hero h2{font-size:1.2rem;}
-}
-
-</style>
+    .highlight {
+      color: #3b82f6;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+<header>
+  <h1>Gayatri Guntreddi</h1>
+  <p>.NET Full Stack Developer</p>
 
-<!-- HERO -->
-<section class="hero">
-<div>
-<h1>Gayatri Guntreddi</h1>
-<h2>.NET Full Stack Developer</h2>
-<p>
-Building enterprise web applications using ASP.NET MVC, ASP.NET Core,
-C#, SQL Server and REST APIs.
-</p>
-<a href="#projects" class="btn">View Projects</a>
-</div>
-</section>
+  <div class="contact">
+    <span>📍 Vijayawada, India</span>
+    <span>📞 +91 9676334989</span>
+    <span>✉️ gayatriguntreddi@gmail.com</span>
+    <a href="#">LinkedIn</a>
+  </div>
+</header>
 
-<!-- STATS -->
+<!-- SUMMARY -->
 <section>
-<div class="stats">
-
-<div class="card">
-<h3>3 Years</h3>
-<p>Experience</p>
-</div>
-
-<div class="card">
-<h3>3</h3>
-<p>Government Projects</p>
-</div>
-
-<div class="card">
-<h3>15+</h3>
-<p>Modules</p>
-</div>
-
-<div class="card">
-<h3>100%</h3>
-<p>Commitment</p>
-</div>
-
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-<h2 class="title">About Me</h2>
-<div class="card about">
-I am a .NET Full Stack Developer working at APTONLINE LIMITED,
-specialized in building scalable enterprise applications and government portals.
-</div>
+  <h2>Summary</h2>
+  <div class="card">
+    Full Stack .NET Developer with 3 years of experience in building scalable and secure web applications using
+    ASP.NET Core, C#, SQL Server, Entity Framework Core, JavaScript, and REST APIs.
+    Experienced in MVC architecture, database optimization, and responsive UI development.
+  </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-<h2 class="title">Skills</h2>
-<div class="skills">
+<section>
+  <h2>Key Skills</h2>
 
-<div class="card">
-<h3>Backend</h3>
-<p>C#, ASP.NET MVC, Web API</p>
-</div>
+  <div class="grid">
+    <div class="skill-box">
+      <h3>Frontend</h3>
+      HTML, CSS, JavaScript, jQuery, Bootstrap
+    </div>
 
-<div class="card">
-<h3>Database</h3>
-<p>SQL Server, EF Core</p>
-</div>
+    <div class="skill-box">
+      <h3>Backend</h3>
+      C#, ASP.NET Core, MVC, Web API, ADO.NET, EF Core
+    </div>
 
-<div class="card">
-<h3>Frontend</h3>
-<p>HTML, CSS, JavaScript</p>
-</div>
+    <div class="skill-box">
+      <h3>Database</h3>
+      SQL Server, Stored Procedures, Query Optimization
+    </div>
 
-<div class="card">
-<h3>Tools</h3>
-<p>Git, Visual Studio</p>
-</div>
-
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-<h2 class="title">Projects</h2>
-
-<div class="projects">
-
-<div class="project-card">
-<h3>APCRDA</h3>
-<p>Authentication & workflow system.</p>
-</div>
-
-<div class="project-card">
-<h3>Yoga Andhra</h3>
-<p>Registration and dashboard system.</p>
-</div>
-
-<div class="project-card">
-<h3>APCCE</h3>
-<p>Education management platform.</p>
-</div>
-
-</div>
+    <div class="skill-box">
+      <h3>Tools</h3>
+      Visual Studio, Git, SSMS
+    </div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-<h2 class="title">Experience</h2>
-<div class="card timeline">
-<h3>Associate Software Engineer</h3>
-<p>APTONLINE LIMITED</p>
-<p>2023 - Present</p>
-</div>
+<section>
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>AptOnline Limited</h3>
+    <span class="badge">Aug 2023 – Present</span>
+    <p><strong>Associate Software Engineer</strong></p>
+
+    <ul>
+      <li>Developed ASP.NET Core MVC applications.</li>
+      <li>Built REST APIs for frontend-backend integration.</li>
+      <li>Worked on responsive UI using Bootstrap & jQuery.</li>
+      <li>Collaborated with teams for deployment and bug fixing.</li>
+    </ul>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2 class="title">Contact</h2>
-<div class="contact">
-<p>Email: guntreddigayatri13@gmail.com</p>
-<p>Phone: +91 9676334989</p>
-<p>Location: Vijayawada</p>
-</div>
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>APCCE Portal</h3>
+    <p>Government college operations management system.</p>
+  </div>
+
+  <div class="card">
+    <h3>Yoga Andhra</h3>
+    <p>Statewide registration and monitoring platform.</p>
+  </div>
+
+  <div class="card">
+    <h3>APCRDA Project</h3>
+    <p>Secure registration system with OTP authentication.</p>
+  </div>
 </section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+
+  <div class="card">
+    <h3>B.Tech - Computer Science Engineering</h3>
+    <p>Lendi Institute of Engineering and Technology</p>
+    <p class="highlight">CGPA: 8.2 | 2019 - 2023</p>
+  </div>
+</section>
+
 
 </body>
 </html>
