@@ -1,20 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gayatri Guntreddi | .NET Full Stack Developer</title>
+<title>Gayatri Guntreddi | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --primary:#2563eb;
-    --secondary:#0f172a;
-    --accent:#38bdf8;
-    --light:#f8fafc;
+    --bg:#0f172a;
     --card:rgba(255,255,255,0.08);
+    --primary:#3b82f6;
+    --secondary:#38bdf8;
+    --text:#f8fafc;
+    --gray:#cbd5e1;
 }
 
 *{
@@ -29,8 +31,8 @@ html{
 }
 
 body{
-    background:#0b1120;
-    color:white;
+    background:var(--bg);
+    color:var(--text);
 }
 
 /* NAVBAR */
@@ -39,7 +41,7 @@ nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(15,23,42,0.95);
+    background:rgba(15,23,42,.9);
     backdrop-filter:blur(10px);
     z-index:1000;
 }
@@ -50,18 +52,18 @@ nav ul{
     list-style:none;
 }
 
-nav ul li{
-    margin:20px;
+nav li{
+    margin:18px;
 }
 
 nav a{
-    color:white;
     text-decoration:none;
+    color:white;
     transition:.3s;
 }
 
 nav a:hover{
-    color:var(--accent);
+    color:var(--secondary);
 }
 
 /* HERO */
@@ -69,71 +71,66 @@ nav a:hover{
 .hero{
     min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:100px 20px;
+    padding:40px;
     background:
-    radial-gradient(circle at top left,#2563eb33,transparent 35%),
-    radial-gradient(circle at bottom right,#38bdf833,transparent 35%),
-    #0b1120;
+    radial-gradient(circle at top left,#2563eb55,transparent 30%),
+    radial-gradient(circle at bottom right,#38bdf855,transparent 30%);
 }
 
 .hero h1{
     font-size:4rem;
-    margin-bottom:10px;
 }
 
 .hero h2{
-    color:var(--accent);
-    margin-bottom:20px;
-    font-weight:500;
+    color:var(--secondary);
+    margin:15px 0;
 }
 
 .hero p{
-    max-width:800px;
+    max-width:750px;
     margin:auto;
+    color:var(--gray);
     line-height:1.8;
-    color:#cbd5e1;
-}
-
-.hero-buttons{
-    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
+    margin-top:30px;
     padding:12px 25px;
-    margin:10px;
-    border-radius:30px;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.primary{
     background:var(--primary);
     color:white;
-}
-
-.secondary{
-    border:1px solid var(--accent);
-    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
 }
 
 .btn:hover{
     transform:translateY(-3px);
 }
 
-/* COMMON */
+/* SECTIONS */
 
 section{
-    padding:80px 10%;
+    padding:90px 10%;
 }
 
-.section-title{
+.title{
     text-align:center;
     font-size:2.5rem;
     margin-bottom:50px;
+}
+
+/* GLASS CARD */
+
+.card{
+    background:var(--card);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
 }
 
 /* STATS */
@@ -144,17 +141,12 @@ section{
     gap:25px;
 }
 
-.stat-card{
-    background:var(--card);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:15px;
-    padding:30px;
+.stat{
     text-align:center;
 }
 
-.stat-card h3{
-    color:var(--accent);
+.stat h3{
+    color:var(--secondary);
     font-size:2rem;
 }
 
@@ -164,36 +156,29 @@ section{
     max-width:900px;
     margin:auto;
     text-align:center;
-    color:#cbd5e1;
-    line-height:1.8;
+    line-height:1.9;
+    color:var(--gray);
 }
 
 /* SKILLS */
 
-.skill-grid{
+.skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
-.skill-box{
-    background:var(--card);
-    border-radius:15px;
-    padding:25px;
-}
-
-.skill-box h3{
+.skills h3{
+    color:var(--secondary);
     margin-bottom:15px;
-    color:var(--accent);
 }
 
-.skill-box ul{
+.skills ul{
     list-style:none;
 }
 
-.skill-box li{
-    padding:6px 0;
-    color:#cbd5e1;
+.skills li{
+    margin:8px 0;
 }
 
 /* PROJECTS */
@@ -201,15 +186,15 @@ section{
 .projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    gap:25px;
 }
 
 .project-card{
     background:var(--card);
     border-radius:20px;
     padding:30px;
+    border:1px solid rgba(255,255,255,.1);
     transition:.3s;
-    border:1px solid rgba(255,255,255,0.1);
 }
 
 .project-card:hover{
@@ -217,7 +202,7 @@ section{
 }
 
 .project-card h3{
-    color:var(--accent);
+    color:var(--secondary);
     margin-bottom:15px;
 }
 
@@ -227,7 +212,7 @@ section{
     font-size:14px;
 }
 
-/* TIMELINE */
+/* EXPERIENCE */
 
 .timeline{
     max-width:900px;
@@ -235,14 +220,7 @@ section{
 }
 
 .timeline-item{
-    background:var(--card);
-    padding:25px;
-    border-left:4px solid var(--accent);
-    border-radius:10px;
-}
-
-.timeline-item p{
-    color:#cbd5e1;
+    border-left:4px solid var(--secondary);
 }
 
 /* CONTACT */
@@ -252,20 +230,18 @@ section{
 }
 
 .contact p{
-    margin:15px 0;
-    color:#cbd5e1;
+    margin:12px 0;
+    color:var(--gray);
 }
 
 /* FOOTER */
 
 footer{
     text-align:center;
-    padding:30px;
+    padding:25px;
     border-top:1px solid rgba(255,255,255,.1);
     color:#94a3b8;
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 
@@ -273,11 +249,7 @@ footer{
     font-size:2.5rem;
 }
 
-.hero h2{
-    font-size:1.2rem;
-}
-
-.section-title{
+.title{
     font-size:2rem;
 }
 
@@ -297,6 +269,8 @@ footer{
 </ul>
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div>
@@ -306,83 +280,86 @@ footer{
 <h2>.NET Full Stack Developer</h2>
 
 <p>
-Building scalable enterprise and government web applications using
-ASP.NET MVC, ASP.NET Core, C#, SQL Server, Entity Framework Core and REST APIs.
-Focused on performance, maintainability and user experience.
+Developing enterprise web applications, REST APIs and database-driven
+solutions using ASP.NET MVC, ASP.NET Core, C#, SQL Server and Entity Framework Core.
+Passionate about building scalable and reliable software.
 </p>
 
-<div class="hero-buttons">
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="#contact" class="btn secondary">Contact Me</a>
-</div>
+<a href="#projects" class="btn">Explore Projects</a>
 
 </div>
 
 </section>
+
+<!-- STATS -->
 
 <section>
 
 <div class="stats">
 
-<div class="stat-card">
+<div class="card stat">
 <h3>3+</h3>
 <p>Years Experience</p>
 </div>
 
-<div class="stat-card">
+<div class="card stat">
 <h3>3</h3>
 <p>Government Projects</p>
 </div>
 
-<div class="stat-card">
+<div class="card stat">
 <h3>15+</h3>
 <p>Modules Delivered</p>
 </div>
 
-<div class="stat-card">
+<div class="card stat">
 <h3>100%</h3>
-<p>Project Commitment</p>
+<p>Commitment</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- ABOUT -->
+
 <section id="about">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="title">About Me</h2>
 
-<div class="about">
+<div class="card about">
 
 <p>
 I am a .NET Full Stack Developer currently working at APTONLINE LIMITED.
-My experience includes developing enterprise-grade applications,
-REST APIs, authentication systems, reporting modules, dashboards,
-and database-driven solutions for government departments.
-I enjoy solving complex business problems and delivering reliable software solutions.
+My expertise includes ASP.NET MVC, ASP.NET Core, Web APIs, SQL Server,
+Entity Framework Core and modern frontend technologies.
+I have worked on large-scale government projects and enjoy solving
+complex business problems through technology.
 </p>
 
 </div>
 
 </section>
 
+<!-- SKILLS -->
+
 <section id="skills">
 
-<h2 class="section-title">Tech Stack</h2>
+<h2 class="title">Technical Skills</h2>
 
-<div class="skill-grid">
+<div class="skills">
 
-<div class="skill-box">
+<div class="card">
 <h3>Backend</h3>
 <ul>
 <li>C#</li>
 <li>ASP.NET MVC</li>
 <li>ASP.NET Core</li>
-<li>REST APIs</li>
+<li>Web API</li>
 </ul>
 </div>
 
-<div class="skill-box">
+<div class="card">
 <h3>Database</h3>
 <ul>
 <li>SQL Server</li>
@@ -392,7 +369,7 @@ I enjoy solving complex business problems and delivering reliable software solut
 </ul>
 </div>
 
-<div class="skill-box">
+<div class="card">
 <h3>Frontend</h3>
 <ul>
 <li>HTML5</li>
@@ -403,13 +380,13 @@ I enjoy solving complex business problems and delivering reliable software solut
 </ul>
 </div>
 
-<div class="skill-box">
+<div class="card">
 <h3>Tools</h3>
 <ul>
 <li>Git</li>
 <li>Visual Studio 2022</li>
 <li>Agile</li>
-<li>Azure Basics</li>
+<li>Debugging</li>
 </ul>
 </div>
 
@@ -417,18 +394,22 @@ I enjoy solving complex business problems and delivering reliable software solut
 
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects">
 
-<h2 class="section-title">Featured Projects</h2>
+<h2 class="title">Featured Projects</h2>
 
 <div class="projects">
 
 <div class="project-card">
 <h3>APCRDA</h3>
+
 <p>
-Developed OTP authentication, application workflows,
-reporting modules and responsive citizen services portal.
+Developed secure authentication, application processing,
+reporting modules and citizen service workflows.
 </p>
+
 <div class="tech">
 ASP.NET MVC • EF Core • SQL Server
 </div>
@@ -436,10 +417,12 @@ ASP.NET MVC • EF Core • SQL Server
 
 <div class="project-card">
 <h3>Yoga Andhra</h3>
+
 <p>
-Built statewide registration and monitoring platform
-with dashboards and reporting capabilities.
+Built registration and monitoring platform with dashboards,
+reporting and participant management.
 </p>
+
 <div class="tech">
 ASP.NET MVC • C# • SQL Server
 </div>
@@ -447,10 +430,12 @@ ASP.NET MVC • C# • SQL Server
 
 <div class="project-card">
 <h3>APCCE</h3>
+
 <p>
-Education management platform supporting student,
-faculty and attendance management systems.
+Education management system supporting students,
+faculty and attendance management.
 </p>
+
 <div class="tech">
 ASP.NET MVC • ADO.NET • SQL Server
 </div>
@@ -460,26 +445,28 @@ ASP.NET MVC • ADO.NET • SQL Server
 
 </section>
 
+<!-- EXPERIENCE -->
+
 <section id="experience">
 
-<h2 class="section-title">Experience</h2>
+<h2 class="title">Experience</h2>
 
 <div class="timeline">
 
-<div class="timeline-item">
+<div class="card timeline-item">
 
 <h3>Associate Software Engineer</h3>
-<h4>APTONLINE LIMITED</h4>
 
-<p>August 2023 – Present</p>
+<p><strong>APTONLINE LIMITED</strong></p>
+
+<p>August 2023 - Present</p>
 
 <br>
 
 <p>
-Developing and maintaining enterprise web applications,
-REST APIs, SQL Server databases and government service portals.
-Working closely with business teams to deliver secure,
-scalable and user-friendly solutions.
+Developing enterprise applications, APIs and database solutions.
+Working on government digital transformation projects and delivering
+secure, scalable software systems.
 </p>
 
 </div>
@@ -488,9 +475,11 @@ scalable and user-friendly solutions.
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
 
-<h2 class="section-title">Let's Connect</h2>
+<h2 class="title">Contact</h2>
 
 <div class="contact">
 
@@ -505,10 +494,6 @@ scalable and user-friendly solutions.
 </div>
 
 </section>
-
-<footer>
-© 2026 Gayatri Guntreddi | .NET Full Stack Developer
-</footer>
 
 </body>
 </html>
