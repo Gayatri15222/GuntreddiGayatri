@@ -1,149 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Gayatri Guntreddi | .NET Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gayatri Guntreddi | .NET Full Stack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-body {
-  background: #0f172a;
-  color: #e5e7eb;
-  scroll-behavior: smooth;
+body{
+    background:#0b1220;
+    color:#fff;
 }
 
-/* NAVBAR */
-nav {
-  position: sticky;
-  top: 0;
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  border-bottom: 1px solid #1f2937;
-  z-index: 1000;
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(10,15,30,0.9);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    padding:12px 0;
+    z-index:1000;
 }
 
-nav h2 {
-  color: #38bdf8;
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 12px;
+    font-size:14px;
 }
 
-nav a {
-  color: #e5e7eb;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #38bdf8;
+nav a:hover{
+    color:#38bdf8;
 }
 
 /* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    background:
+    radial-gradient(circle at top,#1e3a8a55,transparent 40%),
+    radial-gradient(circle at bottom,#38bdf855,transparent 40%);
 }
 
-.hero h1 {
-  font-size: 50px;
+.hero h1{
+    font-size:3.2rem;
 }
 
-.hero p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #94a3b8;
+.hero h2{
+    color:#38bdf8;
+    margin:10px 0;
+    font-size:1.5rem;
 }
 
-.hero .contact {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #cbd5e1;
+.hero p{
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+    line-height:1.7;
 }
 
 /* SECTIONS */
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 60px 20px;
+section{
+    padding:50px 10%;
 }
 
-h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: #38bdf8;
+.title{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:25px;
 }
 
-/* CARDS */
-.card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #1f2937;
-  transition: 0.3s;
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:18px;
+    border-radius:14px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
 }
 
-/* SKILLS */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* STATS */
+.stats{
+    text-align:center;
 }
 
-.tag {
-  background: #1e293b;
-  padding: 8px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  border: 1px solid #334155;
+.stats h3{
+    color:#38bdf8;
+    font-size:1.8rem;
 }
 
-/* PROJECT GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+/* ABOUT */
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#cbd5e1;
+    line-height:1.8;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  background: #38bdf8;
-  color: #0f172a;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+/* PROJECTS */
+.project h3{
+    color:#38bdf8;
+    margin-bottom:8px;
 }
 
-.btn:hover {
-  background: #0ea5e9;
+.project p{
+    color:#cbd5e1;
+    font-size:14px;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #1f2937;
-  color: #94a3b8;
+/* EXPERIENCE */
+.experience p{
+    color:#cbd5e1;
+    line-height:1.7;
 }
+
+/* CONTACT */
+.contact{
+    text-align:center;
+    color:#cbd5e1;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#94a3b8;
+}
+
 </style>
 </head>
 
@@ -151,103 +157,129 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <h2>Portfolio</h2>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-  </div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>Gayatri Guntreddi</h1>
-  <p>.NET Full Stack Developer</p>
-  <div class="contact">
-    📍 Vijayawada | 📞 9676334989 | ✉️ gayatriguntreddi@gmail.com
-  </div>
+<section class="hero">
+<div>
+<h1>GAYATRI GUNTREDDI</h1>
+<h2>.NET FULL STACK DEVELOPER</h2>
 
+<p>
+Full Stack Developer with 3 years of experience in ASP.NET Core, C#, SQL Server,
+Entity Framework Core, and REST APIs. Strong expertise in building scalable government
+and enterprise applications with clean architecture and optimized performance.
+</p>
 </div>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    Full Stack .NET Developer with 3 years of experience in building scalable,
-    secure web applications using ASP.NET Core, C#, SQL Server, and REST APIs.
-    Strong expertise in MVC architecture and backend development.
-  </div>
+<h2 class="title">Summary</h2>
+<div class="card about">
+• Full Stack .NET Developer with experience in ASP.NET Core, MVC, React JS, SQL Server  
+• Experienced in government enterprise applications and API integration  
+• Strong in backend development, database optimization, and responsive UI  
+• Skilled in Agile, debugging, performance optimization, and Git  
+</div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <h2>Skills</h2>
-  <div class="card">
-    <div class="skills">
-      <span class="tag">C#</span>
-      <span class="tag">ASP.NET Core</span>
-      <span class="tag">MVC</span>
-      <span class="tag">Web API</span>
-      <span class="tag">SQL Server</span>
-      <span class="tag">Entity Framework</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">jQuery</span>
-      <span class="tag">Bootstrap</span>
-      <span class="tag">Git</span>
-      <span class="tag">REST APIs</span>
-    </div>
-  </div>
+<h2 class="title">Key Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Frontend</h3>
+<p>HTML, CSS, JavaScript, jQuery, Bootstrap, React JS</p>
+</div>
+
+<div class="card">
+<h3>Backend</h3>
+<p>C#, ASP.NET Core, MVC, .NET Framework, Web APIs</p>
+</div>
+
+<div class="card">
+<h3>Database</h3>
+<p>SQL Server, Stored Procedures, Query Optimization</p>
+</div>
+
+<div class="card">
+<h3>Tools</h3>
+<p>Git, Visual Studio, VS Code, SSMS</p>
+</div>
+
+</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <h2>Experience</h2>
+<h2 class="title">Experience</h2>
 
-  <div class="card">
-    <h3>AptOnline Limited</h3>
-    <p>Associate Software Engineer | Aug 2023 – Present</p>
-    <ul>
-      <li>Developed ASP.NET Core MVC applications</li>
-      <li>Built REST APIs and integrated frontend systems</li>
-      <li>Worked on UI development using Bootstrap & jQuery</li>
-      <li>Improved performance using SQL optimization</li>
-    </ul>
-  </div>
+<div class="card experience">
+<h3>APTONLINE LIMITED</h3>
+<p><b>Associate Software Engineer</b></p>
+<p>Aug 2023 – Present | Vijayawada</p>
+
+<br>
+
+<p>
+• Developed enterprise web applications using ASP.NET Core, C#, SQL Server  
+• Built RESTful APIs and integrated frontend-backend systems  
+• Developed responsive UI using HTML, CSS, Bootstrap  
+• Worked in Agile environment for development, testing, and deployment  
+</p>
+</div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
+<h2 class="title">Projects</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>APCCE Portal</h3>
-      <p>Government education management system.</p>
-    </div>
+<div class="grid">
 
-    <div class="card">
-      <h3>Yoga Andhra</h3>
-      <p>State registration and monitoring platform.</p>
-    </div>
+<div class="card project">
+<h3>APCCE</h3>
+<p>
+Centralized system for college operations including student management,
+attendance tracking, timetable, and reporting modules.
+</p>
+</div>
 
-    <div class="card">
-      <h3>APCRDA System</h3>
-      <p>Secure OTP-based registration system.</p>
-    </div>
-  </div>
+<div class="card project">
+<h3>APCRDA</h3>
+<p>
+OTP-based authentication system with application workflow, reporting,
+and document management features.
+</p>
+</div>
+
+<div class="card project">
+<h3>APPCB</h3>
+<p>
+Waste management system for monitoring environmental data with dashboards,
+REST APIs, and Excel export functionality.
+</p>
+</div>
+
+</div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="title">Contact</h2>
 
-  <div class="card">
-    <h3>B.Tech CSE</h3>
-    <p>Lendi Institute of Engineering and Technology</p>
-    <p>CGPA: 8.2 (2019 - 2023)</p>
-  </div>
+<div class="contact">
+<p>Email: guntreddigayatri13@gmail.com</p>
+<p>Phone: +91 9676334989</p>
+<p>Location: Vijayawada, India</p>
+</div>
 </section>
 
 
