@@ -35,7 +35,6 @@ body{
 }
 
 /* NAVBAR */
-
 nav{
     position:fixed;
     top:0;
@@ -52,13 +51,14 @@ nav ul{
 }
 
 nav li{
-    margin:18px;
+    margin:14px;
 }
 
 nav a{
     text-decoration:none;
     color:white;
     transition:.3s;
+    font-size:14px;
 }
 
 nav a:hover{
@@ -66,39 +66,41 @@ nav a:hover{
 }
 
 /* HERO */
-
 .hero{
-    min-height:100vh;
+    min-height:75vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:40px;
+    padding:30px;
     background:
     radial-gradient(circle at top left,#2563eb55,transparent 30%),
     radial-gradient(circle at bottom right,#38bdf855,transparent 30%);
 }
 
 .hero h1{
-    font-size:4rem;
+    font-size:3.2rem;
 }
 
 .hero h2{
     color:var(--secondary);
-    margin:15px 0;
+    margin:10px 0;
+    font-size:1.5rem;
 }
 
 .hero p{
     max-width:750px;
     margin:auto;
     color:var(--gray);
-    line-height:1.8;
+    line-height:1.7;
+    font-size:15px;
 }
 
+/* BUTTON */
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:12px 25px;
+    margin-top:20px;
+    padding:10px 22px;
     background:var(--primary);
     color:white;
     text-decoration:none;
@@ -111,33 +113,30 @@ nav a:hover{
 }
 
 /* SECTIONS */
-
 section{
-    padding:90px 10%;
+    padding:45px 8%;
 }
 
 .title{
     text-align:center;
-    font-size:2.5rem;
-    margin-bottom:50px;
+    font-size:2rem;
+    margin-bottom:25px;
 }
 
 /* GLASS CARD */
-
 .card{
     background:var(--card);
     backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,.1);
-    border-radius:20px;
-    padding:30px;
+    border-radius:15px;
+    padding:18px;
 }
 
 /* STATS */
-
 .stats{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
 }
 
 .stat{
@@ -146,116 +145,94 @@ section{
 
 .stat h3{
     color:var(--secondary);
-    font-size:2rem;
+    font-size:1.8rem;
 }
 
 /* ABOUT */
-
 .about{
     max-width:900px;
     margin:auto;
     text-align:center;
-    line-height:1.9;
+    line-height:1.7;
     color:var(--gray);
+    font-size:15px;
 }
 
 /* SKILLS */
-
 .skills{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
 }
 
 .skills h3{
     color:var(--secondary);
-    margin-bottom:15px;
-}
-
-.skills ul{
-    list-style:none;
-}
-
-.skills li{
-    margin:8px 0;
+    margin-bottom:10px;
 }
 
 /* PROJECTS */
-
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:18px;
 }
 
 .project-card{
     background:var(--card);
-    border-radius:20px;
-    padding:30px;
+    border-radius:15px;
+    padding:18px;
     border:1px solid rgba(255,255,255,.1);
     transition:.3s;
 }
 
 .project-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 }
 
 .project-card h3{
     color:var(--secondary);
-    margin-bottom:15px;
-}
-
-.tech{
-    margin-top:15px;
-    color:#60a5fa;
-    font-size:14px;
+    margin-bottom:10px;
 }
 
 /* EXPERIENCE */
-
 .timeline{
     max-width:900px;
     margin:auto;
 }
 
-.timeline-item{
-    border-left:4px solid var(--secondary);
-}
-
 /* CONTACT */
-
 .contact{
     text-align:center;
 }
 
 .contact p{
-    margin:12px 0;
+    margin:10px 0;
     color:var(--gray);
+    font-size:15px;
 }
 
 /* FOOTER */
-
 footer{
     text-align:center;
-    padding:25px;
+    padding:20px;
     border-top:1px solid rgba(255,255,255,.1);
     color:#94a3b8;
+    font-size:14px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
-
 .hero h1{
-    font-size:2.5rem;
+    font-size:2.3rem;
 }
-
-.title{
-    font-size:2rem;
+.hero h2{
+    font-size:1.2rem;
 }
-
 }
 
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -269,31 +246,24 @@ footer{
 </nav>
 
 <!-- HERO -->
-
 <section class="hero">
 
 <div>
-
 <h1>Gayatri Guntreddi</h1>
-
 <h2>.NET Full Stack Developer</h2>
 
 <p>
-Developing enterprise web applications, REST APIs and database-driven
-solutions using ASP.NET MVC, ASP.NET Core, C#, SQL Server and Entity Framework Core.
-Passionate about building scalable and reliable software.
+Building enterprise web applications using ASP.NET MVC, ASP.NET Core,
+C#, SQL Server and REST APIs with focus on performance and scalability.
 </p>
 
-<a href="#projects" class="btn">Explore Projects</a>
-
+<a href="#projects" class="btn">View Projects</a>
 </div>
 
 </section>
 
 <!-- STATS -->
-
 <section>
-
 <div class="stats">
 
 <div class="card stat">
@@ -303,12 +273,12 @@ Passionate about building scalable and reliable software.
 
 <div class="card stat">
 <h3>3</h3>
-<p>Government Projects</p>
+<p>Govt Projects</p>
 </div>
 
 <div class="card stat">
 <h3>15+</h3>
-<p>Modules Delivered</p>
+<p>Modules</p>
 </div>
 
 <div class="card stat">
@@ -317,183 +287,93 @@ Passionate about building scalable and reliable software.
 </div>
 
 </div>
-
 </section>
 
 <!-- ABOUT -->
-
 <section id="about">
-
 <h2 class="title">About Me</h2>
 
 <div class="card about">
-
-<p>
-I am a .NET Full Stack Developer currently working at APTONLINE LIMITED.
-My expertise includes ASP.NET MVC, ASP.NET Core, Web APIs, SQL Server,
-Entity Framework Core and modern frontend technologies.
-I have worked on large-scale government projects and enjoy solving
-complex business problems through technology.
-</p>
-
+I am a .NET Full Stack Developer working at APTONLINE LIMITED.
+I specialize in ASP.NET MVC, ASP.NET Core, Web APIs, SQL Server,
+and building scalable enterprise applications for government projects.
 </div>
-
 </section>
 
 <!-- SKILLS -->
-
 <section id="skills">
-
-<h2 class="title">Technical Skills</h2>
+<h2 class="title">Skills</h2>
 
 <div class="skills">
 
 <div class="card">
 <h3>Backend</h3>
-<ul>
-<li>C#</li>
-<li>ASP.NET MVC</li>
-<li>ASP.NET Core</li>
-<li>Web API</li>
-</ul>
+<p>C#, ASP.NET MVC, ASP.NET Core, Web API</p>
 </div>
 
 <div class="card">
 <h3>Database</h3>
-<ul>
-<li>SQL Server</li>
-<li>Entity Framework Core</li>
-<li>ADO.NET</li>
-<li>Stored Procedures</li>
-</ul>
+<p>SQL Server, EF Core, ADO.NET</p>
 </div>
 
 <div class="card">
 <h3>Frontend</h3>
-<ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>JavaScript</li>
-<li>jQuery</li>
-<li>Bootstrap</li>
-</ul>
+<p>HTML, CSS, JavaScript, jQuery, Bootstrap</p>
 </div>
 
 <div class="card">
 <h3>Tools</h3>
-<ul>
-<li>Git</li>
-<li>Visual Studio 2022</li>
-<li>Agile</li>
-<li>Debugging</li>
-</ul>
+<p>Git, Visual Studio 2022, Agile</p>
 </div>
 
 </div>
-
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects">
-
-<h2 class="title">Featured Projects</h2>
+<h2 class="title">Projects</h2>
 
 <div class="projects">
 
 <div class="project-card">
 <h3>APCRDA</h3>
-
-<p>
-Developed secure authentication, application processing,
-reporting modules and citizen service workflows.
-</p>
-
-<div class="tech">
-ASP.NET MVC • EF Core • SQL Server
-</div>
+<p>Authentication, workflows, reporting system.</p>
 </div>
 
 <div class="project-card">
 <h3>Yoga Andhra</h3>
-
-<p>
-Built registration and monitoring platform with dashboards,
-reporting and participant management.
-</p>
-
-<div class="tech">
-ASP.NET MVC • C# • SQL Server
-</div>
+<p>Registration and monitoring dashboard system.</p>
 </div>
 
 <div class="project-card">
 <h3>APCCE</h3>
-
-<p>
-Education management system supporting students,
-faculty and attendance management.
-</p>
-
-<div class="tech">
-ASP.NET MVC • ADO.NET • SQL Server
-</div>
+<p>Education management platform.</p>
 </div>
 
 </div>
-
 </section>
 
 <!-- EXPERIENCE -->
-
 <section id="experience">
-
 <h2 class="title">Experience</h2>
 
-<div class="timeline">
-
-<div class="card timeline-item">
-
+<div class="card timeline">
 <h3>Associate Software Engineer</h3>
-
-<p><strong>APTONLINE LIMITED</strong></p>
-
-<p>August 2023 - Present</p>
-
-<br>
-
-<p>
-Developing enterprise applications, APIs and database solutions.
-Working on government digital transformation projects and delivering
-secure, scalable software systems.
-</p>
-
+<p>APTONLINE LIMITED</p>
+<p>2023 - Present</p>
 </div>
-
-</div>
-
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
-
 <h2 class="title">Contact</h2>
 
 <div class="contact">
-
-<p>📧 guntreddigayatri13@gmail.com</p>
-
-<p>📱 +91 9676334989</p>
-
-<p>📍 Vijayawada, Andhra Pradesh</p>
-
-<p>Open to software development opportunities and collaborations.</p>
-
+<p>Email: guntreddigayatri13@gmail.com</p>
+<p>Phone: +91 9676334989</p>
+<p>Location: Vijayawada</p>
 </div>
-
 </section>
 
 </body>
 </html>
-
