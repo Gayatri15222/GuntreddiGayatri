@@ -3,180 +3,442 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gayatri Guntreddi</title>
+<title>Gayatri Guntreddi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background-color: #f5f5f5;
-        color: #333;
-    }
 
-    .container {
-        max-width: 950px;
-        margin: 20px auto;
-        background-color: #fff;
-        padding: 25px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        border-radius: 8px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-    h1 {
-        text-align: center;
-        color: #2a5298;
-        margin-bottom: 5px;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    h3 {
-        text-align: center;
-        color: #555;
-        margin-top: 0;
-    }
+body{
+    background:#f8fafc;
+    color:#333;
+}
 
-    .contact {
-        text-align: center;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
+/* Navigation */
 
-    h2 {
-        color: #2a5298;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 5px;
-        margin-top: 30px;
-    }
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:#0f172a;
+    z-index:1000;
+}
 
-    .tag {
-        display: inline-block;
-        background-color: #2a5298;
-        color: white;
-        padding: 5px 10px;
-        margin: 3px;
-        border-radius: 5px;
-        font-size: 12px;
-    }
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    flex-wrap:wrap;
+}
 
-    .project {
-        margin-bottom: 20px;
-        padding: 15px;
-        background: #f9fbff;
-        border-left: 4px solid #2a5298;
-        border-radius: 5px;
-    }
+nav ul li{
+    margin:15px;
+}
 
-    ul {
-        margin-left: 20px;
-    }
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
 
-    footer {
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-        background-color: #2a5298;
-        color: white;
-        border-radius: 0 0 8px 8px;
-    }
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e40af);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+.hero-content h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#0f172a;
+}
+
+/* Sections */
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    color:#1e40af;
+    margin-bottom:40px;
+}
+
+/* About */
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:#1e40af;
+    color:white;
+    padding:12px 20px;
+    border-radius:25px;
+}
+
+/* Experience */
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:5px solid #1e40af;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Projects */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    color:#1e40af;
+    margin-bottom:15px;
+}
+
+.project-card ul{
+    margin-left:20px;
+}
+
+/* Education */
+
+.education-card{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.5rem;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-    <!-- HEADER -->
-    <h1>Gayatri Guntreddi</h1>
-    <h3>.NET Full Stack Developer</h3>
+<!-- Hero -->
 
-    <div class="contact">
-        Email: guntreddigayatri13@gmail.com | Phone: +91 9676334989 | Location: Vijayawada<br>
-        LinkedIn: linkedin.com/in/gayatriguntreddi 
-    </div>
+<section class="hero" id="home">
 
-    <!-- SUMMARY -->
-    <h2>Professional Summary</h2>
-    <p>
-        .NET Full Stack Developer with 3 years of experience in designing and developing web applications
-        using ASP.NET MVC, C#, SQL Server, Entity Framework Core, and REST APIs.
-        Experienced in government projects, backend development, and database optimization.
-    </p>
+<div class="hero-content">
 
-    <!-- SKILLS -->
-    <h2>Technical Skills</h2>
+<h1>Gayatri Guntreddi</h1>
 
-    <span class="tag">C#</span>
-    <span class="tag">ASP.NET MVC</span>
-    <span class="tag">ASP.NET Core</span>
-    <span class="tag">Web API</span>
-    <span class="tag">Entity Framework Core</span>
-    <span class="tag">SQL Server</span>
-    <span class="tag">HTML5</span>
-    <span class="tag">CSS3</span>
-    <span class="tag">JavaScript</span>
-    <span class="tag">jQuery</span>
-    <span class="tag">AJAX</span>
-    <span class="tag">Bootstrap</span>
-    <span class="tag">Git</span>
-    <span class="tag">Visual Studio 2022</span>
+<h2>.NET Full Stack Developer</h2>
 
-    <!-- EXPERIENCE -->
-    <h2>Experience</h2>
+<p>
+Building scalable web applications using ASP.NET MVC, ASP.NET Core,
+C#, SQL Server, Entity Framework Core and REST APIs.
+Passionate about developing efficient solutions and delivering
+high-quality software for enterprise and government projects.
+</p>
 
-    <h4>Associate Software Engineer - APTONLINE LIMITED</h4>
-    <p><b>Aug 2023 - Present</b></p>
-
-    <ul>
-        <li>Developed enterprise web applications using ASP.NET MVC and SQL Server.</li>
-        <li>Worked on REST APIs and backend development.</li>
-        <li>Handled debugging, deployment, and production support.</li>
-        <li>Worked in Agile team environment.</li>
-    </ul>
-
-    <!-- PROJECTS -->
-    <h2>Projects</h2>
-
-    <!-- APCRDA -->
-    <div class="project">
-        <h3>Andhra Pradesh Capital Region Development Authority (APCRDA)</h3>
-        <ul>
-            <li>Developed secure login and registration modules with OTP-based authentication.</li>
-            <li>Implemented application submission, preview, reporting, and print functionalities.</li>
-            <li>Built responsive UI using ASP.NET MVC, Bootstrap, AJAX, and jQuery.</li>
-            <li>Optimized SQL queries and stored procedures for better performance.</li>
-        </ul>
-        <b>Technologies:</b> ASP.NET MVC, C#, Entity Framework Core, SQL Server, HTML5, CSS3, JavaScript, jQuery, AJAX, Bootstrap, Git
-    </div>
-
-    <!-- YOGA ANDHRA -->
-    <div class="project">
-        <h3>Yoga Andhra</h3>
-        <ul>
-            <li>Developed statewide registration and monitoring platform.</li>
-            <li>Built participant registration and reporting modules.</li>
-            <li>Designed dashboards for real-time monitoring.</li>
-            <li>Implemented responsive UI and backend integration.</li>
-        </ul>
-        <b>Technologies:</b> ASP.NET MVC, C#, Entity Framework Core, SQL Server, HTML5, CSS3, JavaScript, jQuery, AJAX, Bootstrap, Git
-    </div>
-
-    <!-- APCCE -->
-    <div class="project">
-        <h3>Andhra Pradesh Commissionerate of Collegiate Education (APCCE)</h3>
-        <ul>
-            <li>Developed centralized education management platform for government colleges.</li>
-            <li>Implemented student, faculty, attendance, timetable, and reporting modules.</li>
-            <li>Designed and optimized SQL queries and stored procedures.</li>
-            <li>Integrated backend and frontend for smooth data flow.</li>
-        </ul>
-        <b>Technologies:</b> ASP.NET MVC, C#, ADO.NET, SQL Server, HTML5, CSS3, JavaScript, jQuery, Visual Studio 2022
-    </div>
-
-    <!-- EDUCATION -->
-    <h2>Education</h2>
-    <p><b>B.Tech - Computer Science Engineering</b></p>
-    <p>Lendi Institute of Engineering and Technology (2019 - 2023) - CGPA: 8.2</p>
+<a href="#projects" class="btn">View My Work</a>
 
 </div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<p>
+I am a .NET Full Stack Developer with 3 years of professional experience
+in developing web applications, backend services and database-driven solutions.
+Currently working at APTONLINE LIMITED, contributing to large-scale government
+projects. My expertise includes ASP.NET MVC, ASP.NET Core, SQL Server,
+Entity Framework Core, JavaScript, jQuery and REST API development.
+</p>
+
+</div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">C#</div>
+<div class="skill">ASP.NET MVC</div>
+<div class="skill">ASP.NET Core</div>
+<div class="skill">Web API</div>
+<div class="skill">Entity Framework Core</div>
+<div class="skill">ADO.NET</div>
+<div class="skill">SQL Server</div>
+<div class="skill">JavaScript</div>
+<div class="skill">jQuery</div>
+<div class="skill">AJAX</div>
+<div class="skill">Bootstrap</div>
+<div class="skill">Git</div>
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+
+</div>
+
+</section>
+
+<!-- Experience -->
+
+<section id="experience">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Associate Software Engineer</h3>
+
+<h4>APTONLINE LIMITED</h4>
+
+<p><strong>Aug 2023 - Present</strong></p>
+
+<br>
+
+<ul>
+<li>Developed enterprise-level web applications using ASP.NET MVC.</li>
+<li>Built REST APIs and backend modules.</li>
+<li>Worked on SQL Server database design and optimization.</li>
+<li>Handled deployment, bug fixing and production support.</li>
+<li>Collaborated within Agile development teams.</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>APCRDA</h3>
+<ul>
+<li>OTP authentication system.</li>
+<li>Application submission workflows.</li>
+<li>Reporting and printing modules.</li>
+<li>Performance optimized SQL queries.</li>
+</ul>
+</div>
+
+<div class="project-card">
+<h3>Yoga Andhra</h3>
+<ul>
+<li>Statewide registration platform.</li>
+<li>Monitoring dashboards.</li>
+<li>Real-time reports.</li>
+<li>Responsive user interface.</li>
+</ul>
+</div>
+
+<div class="project-card">
+<h3>APCCE</h3>
+<ul>
+<li>Education management platform.</li>
+<li>Student and faculty management.</li>
+<li>Attendance and timetable modules.</li>
+<li>Database optimization.</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- Education -->
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education-card">
+
+<h3>B.Tech - Computer Science Engineering</h3>
+
+<p>Lendi Institute of Engineering and Technology</p>
+
+<p>2019 - 2023</p>
+
+<p><strong>CGPA: 8.2</strong></p>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="section-title">Get In Touch</h2>
+
+<div class="contact">
+
+<p>📧 guntreddigayatri13@gmail.com</p>
+
+<p>📱 +91 9676334989</p>
+
+<p>📍 Vijayawada, Andhra Pradesh</p>
+
+<p>
+Let's connect and discuss opportunities in software development.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Gayatri Guntreddi | .NET Full Stack Developer</p>
+
+</footer>
 
 </body>
 </html>
