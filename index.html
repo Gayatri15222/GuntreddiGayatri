@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Gayatri Guntreddi | .NET Full Stack Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,31 +15,34 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#0b1220;
-    color:#fff;
+    background:#0f172a;
+    color:white;
 }
 
-/* NAV */
+/* NAVBAR */
+
 nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(10,15,30,0.9);
+    background:rgba(15,23,42,0.95);
     backdrop-filter:blur(10px);
     display:flex;
     justify-content:center;
-    padding:12px 0;
+    padding:18px;
     z-index:1000;
 }
 
 nav a{
-    color:#fff;
+    color:white;
     text-decoration:none;
-    margin:0 12px;
-    font-size:14px;
+    margin:0 18px;
+    font-weight:500;
+    transition:.3s;
 }
 
 nav a:hover{
@@ -46,269 +50,401 @@ nav a:hover{
 }
 
 /* HERO */
+
 .hero{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
-    padding:20px;
+    padding:100px 10%;
     background:
-    radial-gradient(circle at top,#1e3a8a55,transparent 40%),
-    radial-gradient(circle at bottom,#38bdf855,transparent 40%);
+    radial-gradient(circle at top left,#2563eb44,transparent 30%),
+    radial-gradient(circle at bottom right,#38bdf844,transparent 30%);
 }
 
-.hero h1{
-    font-size:3.2rem;
+.hero-content{
+    display:flex;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
 }
 
-.hero h2{
+.profile-pic{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 40px rgba(56,189,248,.5);
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-text h1{
+    font-size:3.5rem;
+}
+
+.hero-text h2{
     color:#38bdf8;
-    margin:10px 0;
-    font-size:1.5rem;
+    margin:12px 0;
 }
 
-.hero p{
-    max-width:800px;
-    margin:auto;
+.hero-text p{
     color:#cbd5e1;
-    line-height:1.7;
+    line-height:1.8;
+    margin-top:15px;
 }
 
-/* SECTIONS */
+.hero-buttons{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#0ea5e9;
+}
+
+/* SECTION */
+
 section{
-    padding:50px 10%;
+    padding:80px 10%;
 }
 
-.title{
+.section-title{
     text-align:center;
-    font-size:2rem;
-    margin-bottom:25px;
+    font-size:2.2rem;
+    margin-bottom:40px;
 }
 
-/* CARD */
+/* CARDS */
+
 .card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1);
-    padding:18px;
-    border-radius:14px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
 }
 
-/* GRID */
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#38bdf8;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:18px;
-}
-
-/* STATS */
-.stats{
-    text-align:center;
-}
-
-.stats h3{
-    color:#38bdf8;
-    font-size:1.8rem;
+    gap:20px;
 }
 
 /* ABOUT */
+
 .about{
     max-width:900px;
     margin:auto;
     text-align:center;
     color:#cbd5e1;
+    line-height:1.9;
+}
+
+/* SKILLS */
+
+.skill-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* EXPERIENCE */
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline h3{
+    color:#38bdf8;
+}
+
+.timeline p{
+    color:#cbd5e1;
     line-height:1.8;
 }
 
 /* PROJECTS */
-.project h3{
+
+.project-card h3{
     color:#38bdf8;
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
-.project p{
-    color:#cbd5e1;
-    font-size:14px;
-}
-
-/* EXPERIENCE */
-.experience p{
+.project-card p{
     color:#cbd5e1;
     line-height:1.7;
 }
 
 /* CONTACT */
+
 .contact{
     text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
     color:#cbd5e1;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    border-top:1px solid rgba(255,255,255,0.1);
-    color:#94a3b8;
-}
-.hero-content{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:50px;
-    flex-wrap:wrap;
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
 }
 
-.hero-text{
-    max-width:700px;
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+.hero-content{
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:2.5rem;
 }
 
 .profile-pic{
     width:220px;
     height:220px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid #38bdf8;
-    box-shadow:0 0 25px rgba(56,189,248,0.5);
 }
+
+.hero-buttons{
+    justify-content:center;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
-<a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-    <div class="hero-content">
 
-        <img src="gayatri.jpeg"
-             alt="Gayatri Guntreddi"
-             class="profile-pic">
+<div class="hero-content">
 
-        <div class="hero-text">
-            <h1>GAYATRI GUNTREDDI</h1>
-            <h2>.NET FULL STACK DEVELOPER</h2>
+<img src="gayatri.jpeg"
+alt="Gayatri Guntreddi"
+class="profile-pic">
 
-            <p>
-                Full Stack Developer with 3 years of experience in ASP.NET Core,
-                C#, SQL Server, Entity Framework Core, and REST APIs. Strong expertise
-                in building scalable government and enterprise applications with clean
-                architecture and optimized performance.
-            </p>
-        </div>
+<div class="hero-text">
 
-    </div>
-</section>
-<!-- ABOUT -->
-<section id="about">
-<h2 class="title">Summary</h2>
-<div class="card about">
-• Full Stack .NET Developer with experience in ASP.NET Core, MVC, React JS, SQL Server  
-• Experienced in government enterprise applications and API integration  
-• Strong in backend development, database optimization, and responsive UI  
-• Skilled in Agile, debugging, performance optimization, and Git  
+<h1>Gayatri Guntreddi</h1>
+
+<h2>.NET Full Stack Developer</h2>
+
+<p>
+Full Stack Developer with 3 years of experience in ASP.NET Core,
+C#, SQL Server, Entity Framework Core, REST APIs, and React JS.
+Passionate about building scalable enterprise applications,
+clean architectures, and high-performance solutions.
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://linkedin.com/in/gayatriguntreddi"
+target="_blank"
+class="btn">
+LinkedIn
+</a>
+
+<a href="Gayatri_DotNet3yFS.pdf"
+target="_blank"
+class="btn">
+Resume
+</a>
+
+<a href="mailto:guntreddigayatri13@gmail.com"
+class="btn">
+Email Me
+</a>
+
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card about">
+
+Experienced Full Stack .NET Developer specializing in ASP.NET Core,
+C#, SQL Server, REST APIs, and React JS. Proven track record of
+developing government and enterprise applications, optimizing
+database performance, and delivering scalable web solutions
+using Agile methodologies.
+
+</div>
+
 </section>
 
 <!-- SKILLS -->
+
 <section id="skills">
-<h2 class="title">Key Skills</h2>
+
+<h2 class="section-title">Technical Skills</h2>
 
 <div class="grid">
 
-<div class="card">
+<div class="card skill-card">
 <h3>Frontend</h3>
-<p>HTML, CSS, JavaScript, jQuery, Bootstrap, React JS</p>
+<p>HTML5, CSS3, JavaScript, Bootstrap, jQuery, React JS</p>
 </div>
 
-<div class="card">
+<div class="card skill-card">
 <h3>Backend</h3>
-<p>C#, ASP.NET Core, MVC, .NET Framework, Web APIs</p>
+<p>C#, ASP.NET Core, MVC, .NET Framework, REST APIs</p>
 </div>
 
-<div class="card">
+<div class="card skill-card">
 <h3>Database</h3>
 <p>SQL Server, Stored Procedures, Query Optimization</p>
 </div>
 
-<div class="card">
+<div class="card skill-card">
 <h3>Tools</h3>
-<p>Git, Visual Studio, VS Code, SSMS</p>
+<p>Git, Visual Studio, VS Code, SSMS, Azure DevOps</p>
 </div>
 
 </div>
+
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-<h2 class="title">Experience</h2>
 
-<div class="card experience">
-<h3>APTONLINE LIMITED</h3>
-<p><b>Associate Software Engineer</b></p>
-<p>Aug 2023 – Present | Vijayawada</p>
+<section id="experience">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="card timeline">
+
+<h3>Associate Software Engineer</h3>
+
+<p><strong>APTOnline Limited</strong></p>
+
+<p>August 2023 – Present | Vijayawada</p>
 
 <br>
 
 <p>
-• Developed enterprise web applications using ASP.NET Core, C#, SQL Server  
-• Built RESTful APIs and integrated frontend-backend systems  
-• Developed responsive UI using HTML, CSS, Bootstrap  
-• Worked in Agile environment for development, testing, and deployment  
+• Developed enterprise web applications using ASP.NET Core, C#, SQL Server.<br>
+• Built RESTful APIs and integrated frontend-backend systems.<br>
+• Designed responsive user interfaces using HTML, CSS, Bootstrap.<br>
+• Collaborated in Agile development environments.<br>
+• Optimized application performance and database operations.
 </p>
+
 </div>
+
 </section>
 
 <!-- PROJECTS -->
+
 <section id="projects">
-<h2 class="title">Projects</h2>
+
+<h2 class="section-title">Projects</h2>
 
 <div class="grid">
 
-<div class="card project">
+<div class="card project-card">
 <h3>APCCE</h3>
 <p>
-Centralized system for college operations including student management,
-attendance tracking, timetable, and reporting modules.
+College management platform for student administration,
+attendance, timetable, and reporting systems.
 </p>
 </div>
 
-<div class="card project">
+<div class="card project-card">
 <h3>APCRDA</h3>
 <p>
-OTP-based authentication system with application workflow, reporting,
-and document management features.
+OTP authentication and workflow management system with
+document processing and reporting modules.
 </p>
 </div>
 
-<div class="card project">
+<div class="card project-card">
 <h3>APPCB</h3>
 <p>
-Waste management system for monitoring environmental data with dashboards,
-REST APIs, and Excel export functionality.
+Environmental monitoring and waste management system with
+dashboards, APIs, and Excel export functionality.
 </p>
 </div>
 
 </div>
+
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact">
-<h2 class="title">Contact</h2>
+
+<h2 class="section-title">Contact</h2>
 
 <div class="contact">
+
 <p>Email: guntreddigayatri13@gmail.com</p>
+
 <p>Phone: +91 9676334989</p>
-<p>Location: Vijayawada, India</p>
+
+<p>Location: Vijayawada, Andhra Pradesh, India</p>
+
+<p>
+LinkedIn:
+<a href="https://linkedin.com/in/gayatriguntreddi" target="_blank">
+linkedin.com/in/gayatriguntreddi
+</a>
+</p>
+
 </div>
+
 </section>
+
 
 
 </body>
